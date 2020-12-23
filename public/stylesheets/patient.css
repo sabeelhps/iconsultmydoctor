@@ -1,0 +1,60 @@
+
+
+.patient-home .card{
+   
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 
+                0 4px 5px 0 rgba(0, 0, 0, 0.29);
+}
+
+.patient-home .card-header{
+    color: #004A7D;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    font-size: 1.3rem;
+    text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.4),
+    0px 4px 8px rgba(0, 0, 0, 0.1),
+    0px 10px 13px rgba(0, 0, 0, 0.1);
+}
+
+.patient-home .card-body{
+    background-color:white;
+    color:black;
+   
+}
+
+.patient-home .card p a{
+    background-color: #004A7D;
+    width: 100%;
+    padding-top:10px;
+    /* height: 3rem; */
+    border-radius: 0px;
+    color: white;
+    font-size: 1.2rem;
+    margin:-10px
+} 
+
+/* .patient-home .card-body p:nth-of-type(2){
+    text-align: center;
+    font-size: 2rem;
+    margin-top:-0.2rem;
+} */
+
+.patient-home .card{
+    transition: transform 0.2s;
+    transition: box-shadow 1s;
+}
+
+.patient-home .card:hover{
+    transform: scale(1.0);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dashboard-button{
+    transition: box-shadow 0.2s;
+}
+
+.dashboard-button:hover{
+    transform: scale(1.0);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

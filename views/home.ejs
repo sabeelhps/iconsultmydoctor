@@ -1,0 +1,169 @@
+<%- include("partials/header") %>
+        <div class="home-page-landing-image">
+            <div class="home-page-tagline">
+                <h2>iConsultmydoctor</h2>
+                <hr>
+                <p>Care for everyone, everywhere</p>
+            </div>
+            <div class="home-page-landing-text">
+                <h1>Our doctors are in, 24/7</h1>
+                <p>We’ve made telemedicine simple and easy for you. Create your personal room and start practicing telemedicine today.</p>
+                <% if(currentUser){ %>
+                    <a href="/<%= currentUser.userType %>/profile" class="btn btn-lg" >Continue <i class="fas fa-chevron-right"></i></a>
+                <% }else{%>
+                    <a href="/patient/login" class="btn btn-lg" >Continue <i class="fas fa-chevron-right"></i></a>
+                <% } %>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 5%; margin-top: 10%;">
+            <div class="home-registration-text">
+                <h1>Using iConsultMyDoctor is as easy as one, two, three.</h1>
+                <p>Doctors are ready to help you get the care you need,<br> anywhere and anytime in the United States.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="text-align: center; border-right: 1px solid grey;">
+                    <div style="font-size: 2rem;">Step 1</div>
+                    <div><i class="far fa-file-alt" style="font-size: 8rem; padding-top: 4%; color: #008dc9;"></i></div>
+                    <div><h4 style="padding-top: 7%;">Register now</h4></div>
+                    <div><p style="padding-top: 2%;">Setting up your<br> secure account only<br> takes minutes.</p></div>
+                </div>
+                <div class="col-md-4" style="text-align: center; border-right: 1px solid grey;">
+                    <div style="font-size: 2rem;">Step 2</div>
+                    <div><i class="far fa-calendar-plus"  style="font-size: 8rem; padding-top: 4%; color: #008dc9;"></i></i></div>
+                    <div><h4 style="padding-top: 7%;">Request a visit</h4></div>
+                    <div><p style="padding-top: 2%;">You can have a doctor visit right<br> away or schedule an appointment - <br>all by phone, computer, or our app.</p></div>
+                </div>
+                <div class="col-md-4" style="text-align: center;">
+                    <div style="font-size: 2rem;">Step 3</div>
+                    <div><i class="fas fa-user-md"   style="font-size: 8rem; padding-top: 4%; color: #008dc9;"></i></div>
+                    <div><h4 style="padding-top: 7%;">Feel better</h4></div>
+                    <div><p style="padding-top: 2%;">Get treated by one of our<br> doctors who can prescribe<br> medication if necessary.</p></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Top doctors card -->
+        <div class="container doctor-cards">
+            <div class="tag-line"><h1>Meet Some Of Our Top Providers</h1></div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="our-team">
+                  <div class="picture">
+                    <img class="img-fluid" src="https://cdn.amwell.com/static/amwell/images/consumer/homepage/ipad_DocProfile_AntallPeter@2x.933b4de795c2.jpg">
+                  </div>
+                  <div class="team-content">
+                    <h3 class="name">PETER ANTALL, MD</h3>
+                    <h4 class="title">Pediatrician</h4>
+                    <p class="title">"I am a board-certified pediatrician with 20 years experience. I am happy to see you, or your child."</p>
+                  </div>
+                  <ul class="social">
+                    <% if(currentUser){ %>
+                        <li><a href="/<%= currentUser.userType %>/profile">Get Appointment</a></li>
+                    <% }else{%>
+                        <li><a href="/patient/login">Get Appointment</a></li>
+                    <% } %>
+                  </ul>
+                </div>
+              </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="our-team">
+                  <div class="picture">
+                    <img class="img-fluid" src="https://cdn.amwell.com/static/amwell/images/consumer/homepage/DocProfile_MiaFinkelston@2x.db290e6fb33f.jpg">
+                  </div>
+                  <div class="team-content">
+                    <h3 class="name">MIA FINKELSTON, MD</h3>
+                    <h4 class="title">Family Physician</h4>
+                    <p class="title">"I go by Dr. Mia and have 20 years of family medicine experience. I look forward to being your physician."</p>
+                  </div>
+                  <ul class="social">
+                    <% if(currentUser){ %>
+                        <li><a href="/<%= currentUser.userType %>/profile">Get Appointment</a></li>
+                    <% }else{%>
+                        <li><a href="/patient/login">Get Appointment</a></li>
+                    <% } %>
+                  </ul>
+                </div>
+              </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="our-team">
+                  <div class="picture">
+                    <img class="img-fluid" src="https://cdn.amwell.com/static/amwell/images/consumer/homepage/ipad_DocProfile_HendersonLindsay@2x.42dbf866a7f8.jpg">
+                  </div>
+                  <div class="team-content">
+                    <h3 class="name">LINDSAY HENDERSON, PSYD</h3>
+                    <h4 class="title">Psychologist</h4>
+                    <p class="title">"I’ve been in practice for over a decade. With my adolescent and adult clinical expertise, I can help you get more out of life."</p>
+                  </div>
+                  <ul class="social">
+                    <% if(currentUser){ %>
+                        <li><a href="/<%= currentUser.userType %>/profile">Get Appointment</a></li>
+                    <% }else{%>
+                        <li><a href="/patient/login">Get Appointment</a></li>
+                    <% } %>
+                  </ul>
+                </div>
+              </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="our-team">
+                  <div class="picture">
+                    <img class="img-fluid" src="https://cdn.amwell.com/static/amwell/images/consumer/homepage/DocProfile_MargaretApura@2x.e9a11a352652.jpg">
+                  </div>
+                  <div class="team-content">
+                    <h3 class="name">MARGARET APURA, RD</h3>
+                    <h4 class="title">Dietitian</h4>
+                    <p class="title">"I have over 15 years of experience as a Registered Dietitian working with people like you to reach your health goals."</p>
+                  </div>
+                  <ul class="social">
+                    <% if(currentUser){ %>
+                        <li><a href="/<%= currentUser.userType %>/profile">Get Appointment</a></li>
+                    <% }else{%>
+                        <li><a href="/patient/login">Get Appointment</a></li>
+                    <% } %>  
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Price plans -->
+        <div class=" price-plans" style="margin-top: 10%; margin-bottom: 10%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h1>Affordable and transparent pricing</h1>
+                        <p class="price-plans-text" style="font-size: 2vm;">Our services are available nationwide, with or without insurance. It’s free to sign up and your visit price is always shown upfront– with no surprise bills later. We work with many major insurance plans and employers to offer even easier access. Check your plan for coverage.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 style="text-align: center;">Our Plans</h3>
+                        <div class="container" style="background-color: white; height: 100%;">
+                            <p class="plan-heading">We're making access to quality healthcare affordable</p>
+                            <div class="row">
+                                <div class="col-xs-4 plan-item">
+                                    <p>Medical Visits</p>
+                                    <p>$75</p>
+                                    <p>Per Visit</p>  
+                                </div>
+                                <div class="col-xs-4 plan-item">
+                                    <p>Medical Visits</p>
+                                    <p>$129</p>
+                                    <p>Monthly Plan</p>  
+                                </div>
+                                <div class="col-xs-4 plan-item">
+                                    <p>Medical Visits</p>
+                                    <p>$299</p>
+                                    <p>Yearly Plan</p>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+    
+    
+<%- include("partials/footer") %>

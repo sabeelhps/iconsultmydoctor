@@ -1,0 +1,113 @@
+  <!-- Jquerry cdn -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
+  <!-- toggle for mobile size -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+  </script>
+
+  <!-- ********************************for dashboard toggle*********************** -->
+  <script>
+    $(document).ready(function(){
+      $(".meeting-content").hide();
+      $(".prescription-content").hide();
+      $(".payment-content").hide();
+      $(".message-content").hide();
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $(".dashboard").click(function(){
+        $(".dashboard-content").show();
+        $(".meeting-content").hide();
+        $(".prescription-content").hide();
+        $(".payment-content").hide();
+        $(".message-content").hide();
+      });
+      $(".meeting").click(function(){
+        $(".dashboard-content").hide();
+        $(".meeting-content").show();
+        $(".prescription-content").hide();
+        $(".payment-content").hide();
+        $(".message-content").hide();
+      });
+      $(".prescription").click(function(){
+        $(".dashboard-content").hide();
+        $(".meeting-content").hide();
+        $(".prescription-content").show();
+        $(".payment-content").hide();
+        $(".message-content").hide();
+      });
+      $(".payment").click(function(){
+        $(".dashboard-content").hide();
+        $(".meeting-content").hide();
+        $(".prescription-content").hide();
+        $(".payment-content").show();
+        $(".message-content").hide();
+      });
+      $(".message").click(function(){
+        $(".dashboard-content").hide();
+        $(".meeting-content").hide();
+        $(".prescription-content").hide();
+        $(".payment-content").hide();
+        $(".message-content").show();
+      });
+    });
+  </script>
+  <!-- **************************Dashboard toggle ends***************************** -->
+
+  
+  <!-- Script for medicine pop up -->
+  <script type="text/JavaScript">
+  // to add input fields while prescribing medicine
+    $(document).ready(function() {
+      var max_fields      = 10; //maximum input boxes allowed
+      var wrapper   		  = $("#medicine-list"); //Fields wrapper
+      var add_button      = $(".add-medicine"); //Add button ID
+      
+      var x = 1; //initlal text box count
+      $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+          x++; //text box increment
+          $(wrapper).append(`<div style="margin-top: 2%"><input style="width: 95%; height: 100%; float: left;" type="text" class="form-control" name="medicine`+x+`" placeholder="Medicine Name" autocomplete="off"/><a href="#" class="remove_field"><i style="margin-left: 2%; margin-top: 2%; color: red;" class="fas fa-times"></i></a></div>`); //add input box
+        }
+      });
+      
+      $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+      })
+    });
+
+
+    // Pass patient id to popup
+    $('#prescription').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('patientid') // Extract info from data-* attributes
+      
+      var modal = $(this)
+      modal.find('.prescription-form').attr('action', '/doctor/prescribe_medicine/'+recipient);
+      // modal.find('.modal-body input').val(recipient)
+    });
+
+
+    </script>
+ 
+
+
+
+  
+</body>
+</html>
